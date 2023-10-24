@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@routes/*": ["./routes/*"],
+      "@utils/*": ["./utils/*"],
+      ".commit-id": ["commit-id"]
+    },
+    "target": "es2018",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "outDir": "dist"
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src", "seeders"],
+  "exclude": ["node_modules"]
+}
