@@ -41,7 +41,7 @@ export const addSensor = asyncFunction(
     if (error)
       return res
         .status(400)
-        .send({ status: 400, msg: error.formErrors.fieldErrors });
+        .send({ status: 400, msg: error.issues[0].message });
 
     if (!data)
       return res
