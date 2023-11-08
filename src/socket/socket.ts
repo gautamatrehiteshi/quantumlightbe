@@ -3,6 +3,7 @@ import { UserModel } from '../database/sequelize/user.model';
 import jose from 'node-jose';
 import * as mqtt from 'mqtt';
 import { topicData } from './mqttTopics';
+
 // import { findAllSensor } from '../services/sensor.service';
 
 interface ISocket extends Socket {
@@ -70,6 +71,46 @@ export async function socket(io: Server): Promise<void> {
       host: process.env.MQTT_HOST,
       port: parseInt(process.env.MQTT_PORT as string),
       protocol: 'mqtt',
+    });
+    // let dataObj: unknown;
+    // socket.on('start', () => {
+    //   console.log('publishing dummy data');
+    //   const data = setInterval(() => {}, 5000);
+    //   dataObj = data;
+    // });
+    // socket.on('stop', () => {
+    //   console.log('stop publishing dummy data');
+    //   console.log(dataObj);
+    //   clearInterval();
+    // });
+
+    let dataObj: NodeJS.Timer | null = null;
+
+    socket.on('start', () => {
+      console.log('publishing dummy data');
+      const data = setInterval(() => {
+        for (let i = 0; i < topicData.length; i++) {
+          const value = topicData[i]['Value'].split(' ');
+          const int = parseInt(value[0]);
+          if (int || int == 0) {
+            value[0] = Math.floor(Math.random() * 100).toString();
+          }
+
+          client.publish('guardian/' + topicData[i].Sensor, value.join(' '));
+        }
+      }, 2500);
+      dataObj = data;
+    });
+
+    socket.on('stop', () => {
+      console.log('stop publishing dummy data');
+      if (dataObj) {
+        console.log(dataObj);
+        clearInterval(dataObj);
+        dataObj = null;
+      } else {
+        console.log('No active interval to clear');
+      }
     });
 
     //listen on mqtt connection
