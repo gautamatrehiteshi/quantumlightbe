@@ -29,11 +29,7 @@ export const topicData = [
     Sensor: 'Long Term Fuel Trim Bank 2',
     Value: '-8.59375 percent',
   },
-  {
-    PID: "b'010A'",
-    Sensor: 'Fuel Pressure',
-    Value: '354 kilopascal',
-  },
+  { PID: "b'010A'", Sensor: 'Fuel Pressure', Value: '354 kilopascal' },
   {
     PID: "b'010B'",
     Sensor: 'Intake Manifold Pressure',
@@ -44,21 +40,9 @@ export const topicData = [
     Sensor: 'Engine RPM',
     Value: '601.0 revolutions_per_minute',
   },
-  {
-    PID: "b'010D'",
-    Sensor: 'Vehicle Speed',
-    Value: '0.0 kph',
-  },
-  {
-    PID: "b'010E'",
-    Sensor: 'Timing Advance',
-    Value: '9.0 degree',
-  },
-  {
-    PID: "b'0110'",
-    Sensor: 'Air Flow Rate(MAF)',
-    Value: '5.69 gps',
-  },
+  { PID: "b'010D'", Sensor: 'Vehicle Speed', Value: '0.0 kph' },
+  { PID: "b'010E'", Sensor: 'Timing Advance', Value: '9.0 degree' },
+  { PID: "b'0110'", Sensor: 'Air Flow Rate(MAF)', Value: '5.69 gps' },
   {
     PID: "b'0111'",
     Sensor: 'Throttle Position',
@@ -89,11 +73,7 @@ export const topicData = [
     Sensor: 'OBD Standards Compliance',
     Value: 'EOBD (Europe)',
   },
-  {
-    PID: "b'011F'",
-    Sensor: 'Engine Run Time',
-    Value: '783.0 second',
-  },
+  { PID: "b'011F'", Sensor: 'Engine Run Time', Value: '783.0 second' },
   {
     PID: "b'0121'",
     Sensor: 'Distance Traveled with MIL on',
@@ -125,13 +105,75 @@ export const topicData = [
     Value: '100 kilopascal',
   },
   {
+    Sensor: 'O2 Sensor 1 WR Lambda Current',
+    Value: '0 unit',
     PID: "b'0134'",
-    Sensor: '02 Sensor 1 WR Lambda Current',
-    Value: '0.01171875 milliampere',
   },
   {
+    Sensor: 'O2 Sensor 5 WR Lambda Current',
+    Value: '0 unit',
     PID: "b'0138'",
-    Sensor: '02 Sensor 5 WR Lambda Current',
-    Value: '0.01171875 milliampere',
+  },
+  {
+    Sensor: 'Catalyst Temperature: Bank 1 - Sensor 1',
+    Value: '0 unit',
+    PID: "b'013C'",
+  },
+  {
+    Sensor: 'Catalyst Temperature: Bank 2 - Sensor 1',
+    Value: '0 unit',
+    PID: "b'013D'",
+  },
+  {
+    Sensor: 'Monitor status this drive cycle',
+    Value: '0 unit',
+    PID: "b'0141'",
+  },
+  { Sensor: 'Control module voltage', Value: '0 unit', PID: "b'0142'" },
+  { Sensor: 'Absolute load value', Value: '0 unit', PID: "b'0143'" },
+  {
+    Sensor: 'Commanded equivalence ratio',
+    Value: '0 unit',
+    PID: "b'0144'",
+  },
+  {
+    Sensor: 'Relative throttle position',
+    Value: '0 unit',
+    PID: "b'0145'",
+  },
+  {
+    Sensor: 'Ambient air temperature',
+    Value: '0 unit',
+    PID: "b'0146'",
+  },
+  {
+    Sensor: 'Absolute throttle position B',
+    Value: '0 unit',
+    PID: "b'0147'",
+  },
+  {
+    Sensor: 'Accelerator pedal position D',
+    Value: '0 unit',
+    PID: "b'0149'",
+  },
+  {
+    Sensor: 'Accelerator pedal position E',
+    Value: '0 unit',
+    PID: "b'014A",
+  },
+  {
+    Sensor: 'Commanded throttle actuator',
+    Value: '0 unit',
+    PID: "b'014C'",
+  },
+  {
+    Sensor: 'Long term secondary O2 trim - Bank 1',
+    Value: '0 unit',
+    PID: "b'0156'",
+  },
+  {
+    Sensor: 'Long term secondary O2 trim - Bank 2',
+    Value: '0 unit',
+    PID: "b'0158'",
   },
 ];
